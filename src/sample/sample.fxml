@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.TextField?>
+<BorderPane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+       <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Canvas fx:id="canvas" height="200.0" layoutX="0.0" layoutY="0.0" width="200.0"/>
+       </Pane>
+   </center>
+   <top>
+       <VBox prefHeight="71.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close"/>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete"/>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" text="About"/>
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <TextField fx:id="xField" />
+               <TextField fx:id="yField" />
+               <Button mnemonicParsing="false" text="Draw" onAction="#draw"/>
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
